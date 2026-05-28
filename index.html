@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Thomas Kuhn: The Game</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Kuhn: The Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="setup-modal" class="modal">
+        <div class="modal-content">
+            <h1>Thomas Kuhn: The Game</h1>
+            <div class="tutorial-text">
+                <p>1. <b>O Ciclo:</b> Saia do Paradigma Inicial e percorra as fases da ciência.</p>
+                <p>2. <b>Mecânica:</b> Acerte a pergunta para avançar. As alternativas mudam de ordem!</p>
+                <p>3. <b>Vitória:</b> Estabeleça o Novo Paradigma para vencer.</p>
+            </div>
+            <div class="form">
+                <input type="text" id="p1-name" placeholder="Equipa Azul">
+                <input type="text" id="p2-name" placeholder="Equipa Amarela">
+                <button class="main-btn" onclick="game.start()">INICIAR JOGO</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="feedback-modal" class="modal" style="display:none;">
+        <div class="modal-content feedback-box">
+            <h2 id="feedback-title">TEORIA REFUTADA</h2>
+            <p id="feedback-message"></p>
+            <button class="main-btn" onclick="game.closeFeedback()">CONTINUAR</button>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal" style="display:none;">
+        <div class="modal-content win-box">
+            <h1>REVOLUÇÃO CIENTÍFICA!</h1>
+            <p id="winner-text"></p>
+            <button class="main-btn" onclick="location.reload()">REINICIAR</button>
+        </div>
+    </div>
+
+    <div id="q-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <div id="q-category" class="category-tag">TEMA</div>
+            <p id="q-text">...</p>
+            <div id="options-container" class="options-grid"></div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div id="turn-indicator">Vez de: <span id="current-team">-</span></div>
+        <div class="board-wrapper">
+            <div class="board-hollow" id="board">
+                <button id="move-btn" onclick="game.requestMove()">TENTAR AVANÇAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
